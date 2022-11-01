@@ -16,7 +16,7 @@ export default function Login() {
       return history.push("/search")
     }
 
-    return alert("Usuário ou password inválidos")
+    return alert("Usuário ou senha inválidos")
   }
 
   return (
