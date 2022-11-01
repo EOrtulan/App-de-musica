@@ -1,48 +1,31 @@
 import React from 'react';
+import { createUser } from '../services/userAPI';
 import { useHistory } from 'react-router-dom';
 
 export default function Login() {
-  const [email,Setemail] = React.useState('');
-  const [password,Setpassword] = React.useState('');
+  const [nome,SetNome] = React.useState('');
   const history = useHistory();
 
-  const validation = () => {
-    const validEmail = /\S+@\S+\.\S+/;
-    const validPassword = 6;
-
-    const validatingEmail = validEmail.test(email);
-
-    if(validatingEmail === true && password.length >= validPassword) {
-      return history.push("/search")
-    }
-
-    return alert("Usuário ou senha inválidos")
+  const user = () => {
+    createUser({ name: nome })
+    return history.push("/search")
   }
 
   return (
-    <form>
+    <div>
       <label>
-        Email: 
+        Nome: 
         <input
-        type="email"
-        onChange={ ({target}) => Setemail(target.value)}
+        type="text"
+        onChange={ ({target}) => SetNome(target.value)}
         />
       </label>
-      <br/>
-      <label>
-        Senha: 
-        <input
-        type="password"
-        onChange={ ({target}) => Setpassword(target.value)}
-        />
-      </label>
-      <br/>
       <button
       type='button'
-      onClick={ validation }
+      onClick={ user }
       >
-        Login
+        Entrar
       </button>
-    </form>
+    </div>
   );
 }
