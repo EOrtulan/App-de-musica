@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { getUser } from '../services/userAPI';
+import Header from '../Components/header';
 
 export default function ProfileEdit() {
   const [usuario, setUsuario] = useState({});
@@ -36,7 +37,9 @@ export default function ProfileEdit() {
   return (
     <div>
       {carregando ? (<h1>CARREGANDO</h1>)
-        : (<from>
+        : (<div>
+          <Header />
+          <from>
           <label>
             Nome:
             <input
@@ -70,7 +73,9 @@ export default function ProfileEdit() {
           <button type="button">
             Salvar
           </button>
-        </from>)}
+        </from>
+        </div>
+        )}
     </div>
   )
 }

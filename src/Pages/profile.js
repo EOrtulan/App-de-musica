@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getUser } from '../services/userAPI';
 import { Link } from 'react-router-dom';
+import Header from '../Components/header';
 
 export default function Profile() {
   const [usuario,setUsuario] = useState({});
@@ -21,6 +22,7 @@ export default function Profile() {
       {carregando ? (<h1>CARREGANDO</h1>)
         : (
           <div>
+            <Header />
             <Link
               to="/profile/edit"
             >Editar perfil</Link>

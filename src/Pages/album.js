@@ -2,6 +2,7 @@ import { stringify } from 'querystring';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import getMusics from '../services/musicsAPI';
+import Header from '../Components/header';
 
 export default function Album() {
   const [musica, setMusica] = useState('')
@@ -25,6 +26,7 @@ export default function Album() {
     <div>
       {carregando ? (<h1>CARREGANDO</h1>) : (
         <div>
+          <Header />
           <img
             src={musica[0].artworkUrl100
             }
