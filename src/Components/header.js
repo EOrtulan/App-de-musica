@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header>
-      <p>{usuario.email}</p>
+      <p>{usuario.name}</p>
       <p><Link to="/search">Pesquisa</Link></p>
       <p><Link to="/favorites">Favoritas</Link></p>
       <p><Link to="/profile">Perfil</Link></p>
