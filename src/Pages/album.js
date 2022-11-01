@@ -1,4 +1,3 @@
-import { stringify } from 'querystring';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import getMusics from '../services/musicsAPI';
@@ -27,10 +26,7 @@ export default function Album() {
       {carregando ? (<h1>CARREGANDO</h1>) : (
         <div>
           <Header />
-          <img
-            src={musica[0].artworkUrl100
-            }
-          />
+          <img src={musica[0].artworkUrl100} />
           <div>
             {musica.map((item, index) => (
               <div key={index}>
@@ -39,7 +35,6 @@ export default function Album() {
                   <track kind="captions" />
                   O seu navegador não suporta o elemento <code>audio</code>.
                 </audio>
-                <br />
               </div>
             ))}
           </div>
