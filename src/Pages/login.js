@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 export default function Login() {
   const [email,Setemail] = React.useState('');
   const [password,Setpassword] = React.useState('');
+  const history = useHistory();
 
   const validation = () => {
     const validEmail = /\S+@\S+\.\S+/;
@@ -11,7 +13,7 @@ export default function Login() {
     const validatingEmail = validEmail.test(email);
 
     if(validatingEmail === true && password.length >= validPassword) {
-      return alert("logado com sucesso")
+      return history.push("/search")
     }
 
     return alert("Usuário ou password inválidos")
