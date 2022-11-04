@@ -4,8 +4,8 @@ import getMusics from '../services/musicsAPI';
 import Header from '../Components/header';
 
 export default function Album() {
-  const [musica, setMusica] = useState('')
-  const [carregando,setCarregando] = useState(true)
+  const [musica, setMusica] = useState('');
+  const [carregando,setCarregando] = useState(true);
   const params = useParams();
 
   const getMusic = async () => {
@@ -18,18 +18,25 @@ export default function Album() {
   }
 
   useEffect(() => {
-    getMusic()
+    getMusic();
   }, []);
 
   return (
     <div>
-      {carregando ? (<h1>CARREGANDO</h1>) : (
+      {carregando ? (<h1 Class="loading">CARREGANDO</h1>) : (
         <div>
           <Header />
-          <img src={musica[0].artworkUrl100} />
-          <div>
+          <div Class="albumheader">
+            <img Class="imageAlbumDetail" src={musica[0].artworkUrl100} />
+            <div Class="albumInfomation">
+              <p>Artista:{' '}{musica[0].artistName}</p>
+              <p>Album:{' '}{musica[0].collectionName}</p>
+              <p>Gênero:{' '}{musica[0].primaryGenreName}</p>
+            </div>
+          </div>
+          <div Class="musics">
             {musica.map((item, index) => (
-              <div key={index}>
+              <div Class="musicDetails" key={index}>
                 <p>{item.trackName}</p>
                 <audio src={item.previewUrl} controls>
                   <track kind="captions" />
