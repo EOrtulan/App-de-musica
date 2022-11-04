@@ -36,46 +36,54 @@ export default function ProfileEdit() {
 
   return (
     <div>
-      {carregando ? (<h1>CARREGANDO</h1>)
-        : (<div>
+      {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
+      : (<div>
           <Header />
-          <from>
-          <label>
-            Nome:
-            <input
-              onChange={({ target }) => setNome(target.value)}
-              placeholder={usuario.name}
-              type="text" />
-          </label>
-          <label>
-            Email:
-            <input
-              placeholder={usuario.email}
-              onChange={({ target }) => setEmail(target.value)}
-              type="text" />
-          </label>
-          <label>
-            Descrição:
-            <textarea
-              onChange={({ target }) => setDescriçao(target.value)}
-              name="message"
-              rows="10"
-              cols="30">
-            </textarea>
-          </label>
-          <label>
-            Imagem:
-            <input
-              onChange={({ target }) => setImagem(target.value)}
-              placeholder={usuario.image}
-              type="text" />
-          </label>
-          <button type="button">
-            Salvar
-          </button>
-        </from>
-        </div>
-        )}
+          <h1 Class="loading">EM PRODUÇÃO</h1>
+         </div>)
+        // : (<div>
+        //   <Header />
+        //   <div>
+        //   <from>
+        //   <label>
+        //     Nome:
+        //     <input
+        //       onChange={({ target }) => setNome(target.value)}
+        //       placeholder={usuario.name}
+        //       type="text" />
+        //   </label>
+        //   <label>
+        //     Email:
+        //     <input
+        //       placeholder={usuario.email}
+        //       onChange={({ target }) => setEmail(target.value)}
+        //       type="text" />
+        //   </label>
+        //   <label>
+        //     Descrição:
+        //     <textarea
+        //       onChange={({ target }) => setDescriçao(target.value)}
+        //       name="message"
+        //       rows="10"
+        //       cols="30">
+        //     </textarea>
+        //   </label>
+        //   <label>
+        //     Imagem:
+        //     <input
+        //       onChange={({ target }) => setImagem(target.value)}
+        //       placeholder={usuario.image}
+        //       type="text" />
+        //   </label>
+        //   <button type="button">
+        //     Salvar
+        //   </button>
+        // </from>
+        // </div>
+        // </div>
+        // )
+        
+         }
     </div>
   )
 }

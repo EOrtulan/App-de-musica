@@ -3,7 +3,7 @@ import { createUser } from '../services/userAPI';
 import { useHistory } from 'react-router-dom';
 
 export default function Login() {
-  const [nome,SetNome] = React.useState('');
+  const [nome, SetNome] = React.useState('');
   const history = useHistory();
 
   const user = () => {
@@ -12,16 +12,20 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div class="loading login">
       <label>
-        Nome: 
         <input
         type="text"
+        placeholder='Nome'
+        Class="inputLogin"
         onChange={ ({target}) => SetNome(target.value)}
         />
       </label>
       <button
+      class="button"
       type='button'
+      disabled={nome.length < 2}
+      Class="buttonLogin"
       onClick={ user }
       >
         Entrar

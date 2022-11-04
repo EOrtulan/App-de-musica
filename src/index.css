@@ -1,10 +1,12 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+  color: #E0E1DD;
+  margin: 0;
+  background-color: #1B263B
 }
 
 code {
@@ -16,4 +18,128 @@ code {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.login {
+  margin-top: 24%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+  background-color: #0D1B2A;
+  padding: 1%;
+  align-items: center;
+  margin-bottom: 1%;
+}
+
+.nameUser {
+  background-color: #E0E1DD;
+  border-radius: 10px;
+  color: #0D1B2A;
+  width: 10%;
+  text-align: center;
+  height: 18px;
+}
+
+.links {
+  text-decoration: none;
+  color: #E0E1DD;
+  font-weight: bold
+}
+
+.musics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+.imageAlbumDetail {
+  margin-left: 5%;
+  width: 250px;
+  border-radius: 50%;
+  margin-top: 2%;
+}
+
+.musicDetails {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.albumheader {
+  display: flex;
+}
+
+.albumInfomation{
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+.inputSearch {
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  width: 30%;
+}
+
+.buttonSearch {
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
+  margin-left: 5px;
+  background-color: white;
+}
+
+.cardMusic {
+  text-align: center;
+  border-radius: 10px;
+  width: 170px;
+  height: 190px;
+  background-color: #E0E1DD;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+.divCards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  margin-left: 2.75%;
+}
+
+.imgSearch {
+  margin-top: 8px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+.cardProfile {
+  text-align: center;
+  margin-top: 3%;
+  /* background-color: #E0E1DD;
+  width: 30%;
+  border-radius: 10px;
+  margin-left: 34%;
+  height: 300px; */
+}
+
+.nameAlbumSearch {
+  text-decoration: none;
+  color: #0D1B2A;
+}
+
+.inputLogin {
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+.buttonLogin {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  margin-left: 10px;
 }

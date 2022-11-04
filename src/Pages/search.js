@@ -16,31 +16,43 @@ export default function Search() {
     return (
       <div>
         <Header />
-        <form>
+        <div>
+          <div Class="loading">
           <input
             type="text"
             value={input}
+            Class="inputSearch"
+            placeholder="O que você gostaria de ouvir?"
             onChange={({ target }) => Setinput(target.value)}
           />
           <button
             type='button'
+            Class="buttonSearch"
             onClick={pesquisaArtista}
           >
             Pesquisar
           </button>
-          <div>
-            {artista === '' ? null : artista.map((item, index) => (
+        </div>
+        <div Class="divCards">
+          {artista === '' ? null : artista.map((item, index) => (
+            <div>
+              <div Class="cardMusic">
               <Link
                 key={index}
+                Class="nameAlbumSearch"
                 to={`/album/${item.collectionId}`}
               >
                 <img
                   src={item.artworkUrl100}
+                  Class="imgSearch"
                 />
                 <p>{item.collectionName}</p>
-              </Link>))}
-          </div>
-        </form>
+              </Link>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    )
+    </div>
+  )
 }

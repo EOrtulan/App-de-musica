@@ -18,12 +18,12 @@ export default function Header() {
 
   return (
     <header>
-      {carregando ? (<h1>CARREGANDO</h1>)
-        : (<div>
-          <p>{usuario.name}</p>
-          <p><Link to="/search">Pesquisa</Link></p>
-          <p><Link to="/favorites">Favoritas</Link></p>
-          <p><Link to="/profile">Perfil</Link></p>
+      {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
+        : (<div Class="header">
+          <p Class="nameUser">{usuario.name}</p>
+          <p><Link Class="links" to="/search">Pesquisar</Link></p>
+          <p><Link Class="links" to="/favorites">Favoritos</Link></p>
+          <p><Link Class="links" to="/profile">Perfil</Link></p>
         </div>)}
     </header>
   )

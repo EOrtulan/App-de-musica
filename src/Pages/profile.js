@@ -19,17 +19,20 @@ export default function Profile() {
 
   return (
     <div>
-      {carregando ? (<h1>CARREGANDO</h1>)
+      {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
         : (
           <div>
             <Header />
+            <div Class="cardProfile">
             <Link
+              Class="links"
               to="/profile/edit"
             >Editar perfil</Link>
             <p>Nome: {usuario.name}</p>
             <p>Email: {usuario.email}</p>
             <p>Imagem: {usuario.image}</p>
             <p>Descrição: {usuario.description}</p>
+            </div>
           </div>
         )}
     </div>
