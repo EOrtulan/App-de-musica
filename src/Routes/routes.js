@@ -7,6 +7,7 @@ import Search from '../Pages/search';
 import Album from '../Pages/album';
 import Profile from '../Pages/profile';
 import ProfileEdit from '../Pages/profileEdit';
+import Favorites from '../Pages/favorite';
 
 const Routes = () => {
    return(
@@ -16,6 +17,7 @@ const Routes = () => {
            <Route component = { Album }  path="/album/:id" exact />
            <Route component = { Profile }  path="/profile" exact />
            <Route component = { ProfileEdit }  path="/profile/edit" exact />
+           <Route component = { Favorites }  path="/favorites" exact />
        </BrowserRouter>
    )
 }
