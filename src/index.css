@@ -18,10 +18,20 @@ code {
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .login {
-  margin-top: 24%;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.loginInputsDiv {
+  display: inline-grid;
+}
+
+.loginInput {
+  margin: 1%;
 }
 
 .header {
@@ -38,15 +48,16 @@ code {
   background-color: #E0E1DD;
   border-radius: 10px;
   color: #0D1B2A;
-  width: 10%;
   text-align: center;
   height: 18px;
+  padding: 2px;
 }
 
 .links {
   text-decoration: none;
   color: #E0E1DD;
-  font-weight: bold
+  font-weight: bold;
+  padding: 2px;
 }
 
 .musics {
@@ -117,12 +128,7 @@ code {
 
 .cardProfile {
   text-align: center;
-  margin-top: 3%;
-  /* background-color: #E0E1DD;
-  width: 30%;
-  border-radius: 10px;
-  margin-left: 34%;
-  height: 300px; */
+  margin-top: 5%;
 }
 
 .nameAlbumSearch {
@@ -134,6 +140,7 @@ code {
   padding: 5px;
   border-radius: 10px;
   border: none;
+  margin-bottom: 3%;
 }
 
 .buttonLogin {
@@ -141,7 +148,8 @@ code {
   border-radius: 10px;
   background-color: white;
   border: none;
-  margin-left: 10px;
+  max-width: 80%;
+  margin-left:10%;
 }
 
 .audioAndFavorite {
@@ -151,4 +159,10 @@ code {
 .buttonFavorite {
   background-color: transparent;
   border-style: none;
+}
+
+.iconMusic {
+  margin-left: 20%;
+  margin-bottom: 10%;
+  width: 100px;
 }

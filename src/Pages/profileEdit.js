@@ -39,7 +39,7 @@ export default function ProfileEdit() {
       {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
       : (<div>
           <Header />
-          <h1 Class="loading">EM PRODUÇÃO</h1>
+          <h1 Class="loading">EM CONSTRUÇÃO</h1>
          </div>)
         // : (<div>
         //   <Header />
