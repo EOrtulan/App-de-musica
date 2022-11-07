@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getUser } from '../services/userAPI';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Header from '../Components/header';
 
 export default function Profile() {
@@ -24,14 +24,14 @@ export default function Profile() {
           <div>
             <Header />
             <div Class="cardProfile">
-            <Link
+            {/* <Link
               Class="links"
               to="/profile/edit"
-            >Editar perfil</Link>
+            >Editar perfil</Link> */}
             <p>Nome: {usuario.name}</p>
             <p>Email: {usuario.email}</p>
-            <p>Imagem: {usuario.image}</p>
-            <p>Descrição: {usuario.description}</p>
+            {/* <p>Imagem: {usuario.image}</p>
+            <p>Descrição: {usuario.description}</p> */}
             </div>
           </div>
         )}
