@@ -65,7 +65,7 @@ code {
 
 .musicDetails {
   text-align: center;
-  margin-left: 10px;
+  margin-left: 3%;
 }
 
 .albumheader {
@@ -95,10 +95,10 @@ code {
 .cardMusic {
   text-align: center;
   border-radius: 10px;
-  width: 170px;
-  height: 190px;
+  width: 150px;
+  height: 170px;
   background-color: #E0E1DD;
-  margin-left: 12px;
+  margin-left: 9px;
   margin-bottom: 12px;
 }
 
@@ -142,4 +142,13 @@ code {
   background-color: white;
   border: none;
   margin-left: 10px;
+}
+
+.audioAndFavorite {
+  display: inline-flex;
+}
+
+.buttonFavorite {
+  background-color: transparent;
+  border-style: none;
 }
