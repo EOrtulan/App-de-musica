@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { getUser } from '../services/userAPI';
-// import { Link } from 'react-router-dom';
 import Header from '../Components/header';
 
 export default function Profile() {
@@ -19,19 +18,13 @@ export default function Profile() {
 
   return (
     <div>
-      {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
+      {carregando ? (<h1 className="loading">CARREGANDO</h1>)
         : (
           <div>
             <Header />
-            <div Class="cardProfile">
-            {/* <Link
-              Class="links"
-              to="/profile/edit"
-            >Editar perfil</Link> */}
+            <div className="cardProfile">
             <p>Nome: {usuario.name}</p>
             <p>Email: {usuario.email}</p>
-            {/* <p>Imagem: {usuario.image}</p>
-            <p>Descrição: {usuario.description}</p> */}
             </div>
           </div>
         )}

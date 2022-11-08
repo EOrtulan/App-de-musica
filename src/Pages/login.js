@@ -26,14 +26,14 @@ export default function Login() {
   }
 
   return (
-    <div class="login">
-      <div Class="loginInputsDiv">
-      <img src={iconMusic} Class="iconMusic" alt="musica" />
+    <div className="login">
+      <div className="loginInputsDiv">
+      <img src={iconMusic} className="iconMusic" alt="musica" />
       <label>
         <input
         type="text"
         placeholder='Nome'
-        Class="inputLogin"
+        className="inputLogin"
         onChange={ ({target}) => SetNome(target.value)}
         />
       </label>
@@ -41,15 +41,14 @@ export default function Login() {
         <input
         type="text"
         placeholder='Email'
-        Class="inputLogin"
+        className="inputLogin"
         onChange={ ({target}) => SetEmail(target.value)}
         />
       </label>
       <button
-      class="button"
+      className="buttonLogin"
       type='button'
       disabled={validation()}
-      Class="buttonLogin"
       onClick={ user }
       >
         Entrar

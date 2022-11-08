@@ -57,39 +57,38 @@ export default function Album() {
 
   return (
     <div>
-      {carregando ? (<h1 Class="loading">CARREGANDO</h1>) : (
+      {carregando ? (<h1 className="loading">CARREGANDO</h1>) : (
         <div>
           <Header />
-          <div Class="albumheader">
-            <img Class="imageAlbumDetail" src={musica[0].artworkUrl100} />
-            <div Class="albumInfomation">
+          <div className="albumheader">
+            <img className="imageAlbumDetail" src={musica[0].artworkUrl100} />
+            <div className="albumInfomation">
               <p>Artista:{' '}{musica[0].artistName}</p>
               <p>Album:{' '}{musica[0].collectionName}</p>
               <p>Gênero:{' '}{musica[0].primaryGenreName}</p>
             </div>
           </div>
-          <div Class="musics">
-            {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
-            : (musica.map((item, index) => (
-              <div Class="musicDetails" key={index}>
+          <div className="musics">
+            {musica.map((item, index) => (
+              <div className="musicDetails" key={index}>
                 <p>{item.trackName}</p>
-                <div Class="audioAndFavorite">
+                <div className="audioAndFavorite">
                 <audio src={item.previewUrl} controls>
                   <track kind="captions" />
                   O seu navegador não suporta o elemento <code>audio</code>.
                 </audio>
                 <button
-                Class="buttonFavorite"
+                className="buttonFavorite"
                 type="button"
                 onClick={ () =>addOrRemove(item) && checkFavorite(item)}>
                 <img
-                    Class="imgFavorite"
+                    className="imgFavorite"
                     src={ checkFavorite(item) ? iconRed : iconWhite }
                     alt="icone" />
                 </button>
                 </div>
               </div>
-            )))}
+            ))}
           </div>
         </div>
       )}
