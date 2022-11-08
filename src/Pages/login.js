@@ -1,16 +1,16 @@
 import React, { useState }  from 'react';
 import { createUser } from '../services/userAPI';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import iconMusic from '../Icons/icon-music/notas-musicais.png'
 
 export default function Login() {
   const [nome, SetNome] = useState('');
   const [email, SetEmail] = useState('');
-  const history = useHistory();
+  const history = useNavigate();
 
   const user = () => {
     createUser({ name: nome, email: email })
-    return history.push("/search")
+    return history("/search")
   }
 
   const validation = () => {
