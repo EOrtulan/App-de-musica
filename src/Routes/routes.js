@@ -1,25 +1,20 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { Route, BrowserRouter } from "react-router-dom";
-
-import Login from "../Pages/login";
+import Login from '../Pages/login';
 import Search from '../Pages/search';
 import Album from '../Pages/album';
-import Profile from '../Pages/profile';
-import ProfileEdit from '../Pages/profileEdit';
 import Favorites from '../Pages/favorite';
+import Profile from '../Pages/profile';
 
-const Routes = () => {
-   return(
-       <BrowserRouter>
-           <Route component = { Login }  path="/" exact />
-           <Route component = { Search }  path="/search" exact />
-           <Route component = { Album }  path="/album/:id" exact />
-           <Route component = { Profile }  path="/profile" exact />
-           <Route component = { ProfileEdit }  path="/profile/edit" exact />
-           <Route component = { Favorites }  path="/favorites" exact />
-       </BrowserRouter>
-   )
+export default function rotas() {
+  return (
+    <Routes>
+      <Route element={<Login />} path="/" exact />
+      <Route element={<Search />} path="/search" exact />
+      <Route element={<Album />} path="/album/:id" exact />
+      <Route element={<Favorites />} path="/favorites" exact />
+      <Route element={<Profile />} path="/profile" exact />
+    </Routes>
+  )
 }
-
-export default Routes;

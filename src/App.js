@@ -1,8 +1,14 @@
-import React from 'react';
-import Routes from './Routes/routes';
+import './App.css';
+import { BrowserRouter } from "react-router-dom";
 
-export default function App() {
+import Rotas from './Routes/routes';
+
+function App() {
   return (
-      <Routes/>
+    <BrowserRouter>
+      <Rotas />
+    </BrowserRouter>
   );
 }
+
+export default App;
