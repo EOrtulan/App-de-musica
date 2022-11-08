@@ -10,6 +10,10 @@ export default function Search() {
   const pesquisaArtista = async () => {
     const response = await searchAlbumsAPI(input);
     await SetArtista(response);
+    if (response.length === 0) {
+      Setinput('');
+      return alert('Nenhum artista encontrado')
+    }
     Setinput('');
   }
 
@@ -17,34 +21,33 @@ export default function Search() {
       <div>
         <Header />
         <div>
-          <div Class="loading">
+          <div className="loading">
           <input
             type="text"
             value={input}
-            Class="inputSearch"
-            placeholder="O que você gostaria de ouvir?"
+            className="inputSearch"
+            placeholder="Escolha um artista"
             onChange={({ target }) => Setinput(target.value)}
           />
           <button
             type='button'
-            Class="buttonSearch"
+            className="buttonSearch"
             onClick={pesquisaArtista}
           >
             Pesquisar
           </button>
         </div>
-        <div Class="divCards">
-          {artista === '' ? null : artista.map((item, index) => (
-            <div>
-              <div Class="cardMusic">
+        <div className="divCards">
+          {artista === '' ? null : artista.map((item) => (
+            <div key={item.collectionId}>
+              <div className="cardMusic">
               <Link
-                key={index}
-                Class="nameAlbumSearch"
+                className="nameAlbumSearch"
                 to={`/album/${item.collectionId}`}
               >
                 <img
                   src={item.artworkUrl100}
-                  Class="imgSearch"
+                  className="imgSearch"
                 />
                 <p>{item.collectionName}</p>
               </Link>

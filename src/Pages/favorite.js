@@ -54,20 +54,20 @@ export default function Favorites() {
     <div>
       <Header />
       <div>
-        {carregando ? (<h1 Class="loading">CARREGANDO</h1>)
+        {carregando ? (<h1 className="loading">CARREGANDO</h1>)
           : (musica.map((item, index) => (
-            <div Class="musicDetails" key={index}>
+            <div className="musicDetails" key={index}>
               <p>{item.artistName} - {item.trackName}</p>
-              <div Class="audioAndFavorite">
+              <div className="audioAndFavorite">
                 <audio src={item.previewUrl} controls>
                   <track kind="captions" />
                   O seu navegador não suporta o elemento <code>audio</code>.
                 </audio>
-                <button Class="buttonFavorite"
+                <button className="buttonFavorite"
                   type="submit"
                   onClick={() => addOrRemove(item) && checkFavorite(item)}>
                   <img
-                    Class="imgFavorite"
+                    className="imgFavorite"
                     src={checkFavorite(item) ? iconRed : iconWhite}
                     alt="icone" />
                 </button>

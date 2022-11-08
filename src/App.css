@@ -63,7 +63,7 @@ code {
 .musics {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 3%;
+  place-content: center;
   margin-top: 1%;
 }
 
@@ -76,7 +76,6 @@ code {
 
 .musicDetails {
   text-align: center;
-  margin-left: 3%;
 }
 
 .albumheader {
@@ -116,8 +115,8 @@ code {
 .divCards {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2%;
-  margin-left: 2.75%;
+  margin-top: 3%;
+  place-content: center;
 }
 
 .imgSearch {
