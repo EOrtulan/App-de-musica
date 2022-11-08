@@ -10,7 +10,7 @@ Possuí suporte para mobile e PC
 
 Caso deseje experimentar a aplicação esta disponível no seguinte link:
 <br>
-``` https://app-de-musica.herokuapp.com/ ```
+``` https://app-de-musica.vercel.app/ ```
 </details>
 
 <details>
